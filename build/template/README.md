@@ -1,6 +1,6 @@
 # #{pluginName}
 
-> 这是一个 [vue-cli](https://github.com/vuejs/vue-cli) 项目模板，开发语言为 TypeScript，默认集成 [flagwind-core](https://github.com/flagwind/flagwind-core)、[flagwind-web](https://github.com/flagwind/flagwind-web) 等库，可用于 PC 端项目。
+> 这是一个 [vue-cli](https://github.com/vuejs/vue-cli) 项目模板，开发语言为 TypeScript，可用于 PC 端项目。
 
 ## 如何使用?
 
