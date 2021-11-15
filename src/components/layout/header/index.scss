@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.u-header {
+    $bg-header-left: var(--bg-header-left, #fff);
+    $bg-header-right: var(--bg-header-right, #fff);
+    @include flex(row, flex-start, center);
+    @include size(100%, 0.62rem);
+    padding-left: 0.36rem;
+    overflow: hidden;
+    background: linear-gradient(to right, $bg-header-left 0%, $bg-header-right 100%);
+    box-shadow: 0 2px 4px 2px var(--box-shadow-color, rgba(0, 0, 0, 0.1));
+
+    .logo {
+        i {
+            font-size: 0.38rem;
+            color: var(--header-color, #fff);
+        }
+    }
+
+    .title {
+        flex: 1;
+        margin-left: 0.1rem;
+        color: var(--header-color, #fff);
+        cursor: default;
+    }
+
+    .center {
+        @include flex(row, center, center);
+        flex: 1;
+
+        .menus {
+            @include flex(row, center, center);
+            position: relative;
+        }
+    }
+
+    .router-link {
+        @include size(1.5rem, 0.6rem);
+        font-size: 0.24;
+        font-weight: 550;
+        line-height: 0.6rem;
+        letter-spacing: 0.02rem;
+        color: #000;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+
+        &.router-link-active {
+            color: #fff;
+        }
+
+        &:hover {
+            color: #fff;
+            opacity: 0.8;
+        }
+    }
+}

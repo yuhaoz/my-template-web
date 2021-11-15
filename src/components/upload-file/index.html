@@ -1,0 +1,30 @@
+<div class="upload-file-flex">
+    <span v-if="!file.fileID&&readonly">无上传内容</span>
+    <div class="egova-flex-row" v-if="!file.fileID&&!readonly">
+        <div class="upload-file" v-if="showImage" @click="onChooseImage">
+            <i-icon type="ios-camera" size="20"></i-icon>
+            <span>上传图片</span>
+        </div>
+        <div class="huo" v-if="showHuo">或</div>
+        <div class="upload-file" v-if="showVideo" @click="onChooseVideo">
+            <i-icon type="ios-videocam" size="20"></i-icon>
+            <span>上传视频</span>
+        </div>
+        <div class="huo" v-if="uploadStatus.status===1">上传中：{{percentCompleted}}%</div>
+    </div>
+
+    <div class="upload-list-body" v-if="file.fileID&&showImage">
+        <g-image-viewer class="table-image" :images="file.fileID" v-if="file.fileID"></g-image-viewer>
+        <div class="upload-list-cover">
+            <i-icon v-if="!readonly" type="ios-trash-outline" color="#FB070E" @click.native="onDeleteFile"></i-icon>
+        </div>
+        <i-progress :stroke-width="15" :percent="percentCompleted" :status="uploadStatus.success?'success':'wrong'" text-inside></i-progress>
+    </div>
+    <div class="upload-video-body" v-if="file.fileID&&showVideo">
+        <video width="320" height="200" controls class="table-video" muted preload="auto" :src="file.fileID"></video>
+        <div class="upload-list-cover">
+            <i-icon type="ios-trash-outline" color="#FB070E" @click.native="onDeleteFile"></i-icon>
+        </div>
+        <i-progress :stroke-width="15" :percent="percentCompleted" :status="uploadStatus.success?'success':'wrong'" text-inside></i-progress>
+    </div>
+</div>

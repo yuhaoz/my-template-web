@@ -1,0 +1,34 @@
+<article class="page-content">
+    <header class="tool-bar" v-if="showHeader">
+        <span class="diy-title">{{title}}</span>
+        <div class="right-tool" v-if="!$slots['btn']">
+            <i
+                class="iconfont icon-list"
+                :class="[btn.icon, current.type===btn.type?'active':'']"
+                :title="btn.text"
+                @click.stop="onCheckType(btn)"
+                v-for="(btn,index) in buttons"
+                :key="index"
+            ></i>
+        </div>
+        <slot name="btn"></slot>
+    </header>
+    <div class="page-content-body">
+        <slot name="ext"></slot>
+        <slot></slot>
+
+        <i-page
+            class="diy-page"
+            :total="paging.totalCount"
+            :current="paging.pageIndex"
+            :page-size="paging.pageSize"
+            :page-size-opts="pageSizeOpts"
+            @on-change="onPageIndexChange"
+            @on-page-size-change="onPageSizeChange"
+            show-elevator
+            show-sizer
+            show-total
+        >
+        </i-page>
+    </div>
+</article>

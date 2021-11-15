@@ -1,0 +1,12 @@
+{
+    "useConfigFiles": true,
+    "packageManager": "npm",
+    "useTaobaoRegistry": true,
+    "cssPreprocessor": "node-sass",
+    "router": true,
+    "vuex": true,
+    "routerHistoryMode": false,
+    "plugins": {
+      "@vue/cli-plugin-babel": {}
+    }
+  }
