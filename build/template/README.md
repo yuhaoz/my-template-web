@@ -20,14 +20,12 @@ vue/cli版本为4.5.15
 
 ``` bash
 
-vue create --preset direct:ssh://git@code.aliyun.com:zyuhao/my-template-web.git --clone my-project
-或者
-vue create --preset gitlab:https://code.aliyun.com:zyuhao/my-template-web --clone my-project
+vue create --preset yuhaoz/my-template-web
+
 ```
 
 ## 包含哪些内容?
 
 - `npm run serve` 进入调试模式，默认地址为 `http://localhost:8030`
 - `npm run build` 生产打包
-
 
