@@ -20,7 +20,7 @@ vue/cli版本为4.5.15
 
 ``` bash
 
-vue create --preset yuhaoz/my-template-web
+vue create --preset yuhaoz/my-template-web my-project
 
 ```
 
