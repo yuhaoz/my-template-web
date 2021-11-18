@@ -1,6 +1,6 @@
 # #{pluginName}
 
-> 这是一个 [vue-cli](https://github.com/vuejs/vue-cli) 项目模板，开发语言为 TypeScript，可用于 PC 端项目。
+> 这是一个 [vue-cli](https://github.com/vuejs/vue-cli) 项目模板，开发语言为 TypeScript，可用于 PC 端项目。天蓝色主题的管理后台
 
 ## 如何使用?
 
