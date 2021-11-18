@@ -1,4 +1,4 @@
-# egova-admin-template-web
+# admin-template-web
 
 > 后台管理模板项目
 
@@ -81,7 +81,6 @@ _插件会按规则自动调整某些 css 代码。例如：插件会自动按�
 
 -   `npm run dev` 进入调试模式，默认地址为 `http://localhost:8040`
 -   `npm run lint` 使用 `tslint` 验证源码
--   `npm run dll` 预打包核心依赖库
 -   `npm run build` 生产打包
 -   `lint:css` 使用 `stylelint` 验证样式源码规范性
 -   `lint:css-fix` 使用 `stylelint` 规范样式源码
