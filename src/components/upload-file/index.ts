@@ -1,4 +1,4 @@
-import { component, watch, config, Component, autowired } from "@egova/flagwind-web";
+import { component, watch, config, Component, autowired } from "@/core";
 import "./index.scss";
 import { uni, uniCloud } from "@/settings";
 import CommonService from "@/services/common-service";
@@ -18,7 +18,7 @@ export default class UploadFile extends Component {
     public fileType!: string;
 
     @config({ type: Boolean, default: () => false })
-    public readonly!: Boolean;
+    public readonly!: boolean;
 
     public file: any = {};
 
@@ -27,7 +27,7 @@ export default class UploadFile extends Component {
         status: 0 // 0:初始 1-上传中，2-上传完成，
     };
 
-    public percentCompleted: Number = 0;
+    public percentCompleted: number = 0;
 
     public get showHuo() {
         if (this.fileType !== "all") {

@@ -7,7 +7,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Vuex from "vuex";
 
-// import ViewUI from "view-design";
+import ViewUI from "view-design";
 
 import math from "halo-math";
 
@@ -91,7 +91,7 @@ export default class Workbench extends WorkbenchBase {
      */
     private initializeComponent(context: ApplicationContext): void {
         // 注册系统组件
-        // Vue.use(ViewUI);
+        Vue.use(ViewUI);
         Vue.use(iviewInstall);
         Vue.use(math);
     }

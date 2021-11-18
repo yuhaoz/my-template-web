@@ -2,21 +2,22 @@
 $menu-item-active-bg: var(--menu-item-active-bg, #38f);
 $menu-item-active-color: var(--menu-item-active-color, #fff);
 $menu-item-color: var(--menu-item-color, #abc);
-$menu-item-background-hover: var(--menu-item-background-hover, rgba(102, 102, 102, 0.473));
-$background-color: var(--menu-background-color, #235);
+$menu-item-background-hover: var(--menu-item-background-hover,
+rgba(102, 102, 102, 0.473));
 
 .u-menu {
     $box-shadow-color: var(--box-shadow-color, rgba(0, 0, 0, 0.1));
     $transition-duration: 0.2s;
-    // $menu-item-background-color: var(--menu-item-background-color, #2d3d5d);
+    $menu-background-color: var(--menu-background-color, #235);
+    $menu-item-background-color: var(--menu-item-background-color, #2d3d5d);
     @include size(2.2rem, 100%);
     display: flex;
     min-width: 160px;
-    padding: 0.1rem 0;
+    padding: 0.1rem 0.05rem 0;
     overflow: hidden;
     font-family: "PingFangSC, PingFangSC-Regular";
     font-weight: 400;
-    background-color: $background-color;
+    background-color: $menu-background-color;
     box-shadow: 5px 0 5px 0 $box-shadow-color;
     transition-duration: $transition-duration;
     transition-property: all;
@@ -37,10 +38,7 @@ $background-color: var(--menu-background-color, #235);
                     flex: 1;
                 }
 
-                .img-down {
-                    @include size(0.12rem, 0.08rem);
-                    @include bg-img("~@/assets/images/icon/down.png");
-                    font-size: 0.1rem;
+                .ivu-icon-md-arrow-dropdown {
                     transition: transform $transition-duration ease-in-out;
                 }
             }
@@ -51,8 +49,8 @@ $background-color: var(--menu-background-color, #235);
             }
 
             &.opened {
-                .img-down {
-                    transform: rotateZ(-90deg);
+                .ivu-icon-md-arrow-dropdown {
+                    transform: rotateZ(180deg);
                 }
 
                 .menu-item-container {
@@ -72,7 +70,9 @@ $background-color: var(--menu-background-color, #235);
             user-select: none;
 
             &:hover {
+                // background-color: rgb(240, 240, 240);
                 background-color: $menu-item-background-hover;
+                border-radius: 0.08rem;
                 box-shadow: 0.01rem 0.01rem 0.03rem 0.01rem $menu-item-background-hover;
             }
 
@@ -96,6 +96,7 @@ $background-color: var(--menu-background-color, #235);
         .menu-item,
         .menu-group-title {
             font-size: 0.18rem;
+            // background-color: var(--menu-item-background-color, #384766);
 
             .router-link {
                 font-size: 0.18rem;
@@ -103,6 +104,8 @@ $background-color: var(--menu-background-color, #235);
         }
 
         .menu-group .menu-item {
+            background-color: $menu-item-background-color;
+
             .router-link {
                 font-size: 0.16rem;
             }
@@ -111,18 +114,24 @@ $background-color: var(--menu-background-color, #235);
         .menu-item,
         .menu-group {
             margin-top: 1px;
+
+            &.opened .menu-group-title-name {
+                color: #fff;
+            }
         }
 
         .iconfont.circle {
             display: inline-block;
             margin-left: 0.2rem;
-            border: 2px solid $menu-item-color;
+            border: 2px solid #fff;
             border-radius: 4px;
+            @include size(8px, 8px);
         }
     }
 
     > .menu-collaps-btn {
         width: 100%;
+        // text-align: left;
         padding: 0 0.2rem;
         color: $menu-item-color;
 
@@ -145,12 +154,11 @@ $background-color: var(--menu-background-color, #235);
     width: 0.6rem;
     min-width: 50px;
 
-    > .menu-section {
-        .menu-group.active {
-            background-color: $menu-item-background-hover;
-            // border-radius: 0.08rem;
-        }
+    .menu-group {
+        background-color: #384766;
+    }
 
+    > .menu-section {
         .router-link {
             @include flex(row, center, center);
             padding: 0;
@@ -171,17 +179,16 @@ $background-color: var(--menu-background-color, #235);
     }
 
     > .menu-collaps-btn {
-        padding: 0;
-        text-align: center;
+        // text-align: center;
+        padding-left: 0.12rem;
 
         .iconfont {
             margin-right: unset;
             transform: rotateZ(180deg);
-            transform-origin: center;
         }
     }
 }
-// 收起后二级子菜单
+
 .ivu-dropdown-menu-diy {
     background-color: #235;
 
@@ -208,20 +215,32 @@ $background-color: var(--menu-background-color, #235);
     }
 }
 
-
 %router-link-active {
     position: relative;
     color: $menu-item-active-color;
     background: $menu-item-active-bg;
+    border-radius: 0.08rem;
     box-shadow: 0.01rem 0.01rem 0.03rem 0.01rem $menu-item-background-hover;
 
     .iconfont {
         color: $menu-item-active-color;
-        border-color: $menu-item-active-color;
     }
 
     > i,
     > span {
         z-index: 1;
     }
+    // &::after {
+    //     content: "";
+    //     display: inline-block;
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 0;
+    //     left: 0.1rem;
+    //     right: 0.1rem;
+    //     background-image: linear-gradient(90deg, rgba(179, 192, 255, 1), rgba(32, 97, 211, 1));
+    //     border-radius: 0.45rem;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // }
 }

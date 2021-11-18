@@ -14,4 +14,9 @@ export default class CommonService extends ServiceBase {
             password
         });
     }
+
+    // 删除文件
+    public fileDelete(data: any) {
+        return this._clound("admin/file/delete", data);
+    }
 }
