@@ -1,0 +1,46 @@
+.diy-flex-colunm {
+    display: flex;
+    flex-direction: column;
+}
+.diy-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+/******* 页面布局 纵向流失布局 ************/
+.diy-page {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    @include size();
+}
+/******* 块状布局, 含背景 圆角 阴影 ************/
+.diy-panel {
+    padding: 0.1rem;
+    background: #fff;
+    border-radius: 0.08rem;
+    box-shadow: 0 0.02rem 0.1rem 0 rgba(34, 51, 85, 0.1);
+}
+/**********表格或者card所在的布局**************/
+.diy-main-panel {
+    flex: 1;
+    // margin-top: 0.1rem;
+    overflow: hidden;
+}
+/**********表格**************/
+.diy-table-panel {
+    flex: 1;
+    overflow-y: auto;
+}
+/**********card**************/
+.diy-card-panel {
+    display: flex;
+    flex: 1;
+    overflow-y: scroll;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.no-data-bg {
+    @include bg-img("~@/assets/images/empty_result.svg");
+    @include size(2rem, 2rem);
+    margin: auto;
+}

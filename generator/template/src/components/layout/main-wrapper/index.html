@@ -1,0 +1,20 @@
+<div class="v-page-menu-container">
+    <aside v-if="!hideSideMenu" class="side-menu-container">
+        <u-menu :menu-list="menuList"> </u-menu>
+    </aside>
+    <main class="main-wrapper" :style="hideSideMenu? 'padding: 0':''">
+        <section class="breadcrumb">
+            <span>当前位置：</span>
+            <i-breadcrumb>
+                <i-breadcrumb-item
+                    v-for="(item, index) in breadCrumbList"
+                    :key="index"
+                    >{{item}}</i-breadcrumb-item
+                >
+            </i-breadcrumb>
+        </section>
+        <section class="page-container">
+            <router-view></router-view>
+        </section>
+    </main>
+</div>

@@ -1,0 +1,48 @@
+.v-page-menu-container {
+    $background-shadow-color: var(--box-shadow-color);
+    @include size;
+    @include flex(row, flex-start, flex-start);
+    position: relative;
+    flex: 1;
+
+    > aside {
+        height: 100%;
+        overflow-y: auto;
+        box-shadow: 0 2px 4px 2px $background-shadow-color;
+    }
+
+    > .main-wrapper {
+        @include size;
+        @include flex(column, flex-start, flex-start);
+        position: relative;
+        flex: 1;
+        padding: 0.2rem;
+        padding-top: 0;
+        overflow: hidden;
+        background: #eef2f5;
+
+        > .breadcrumb {
+            padding-top: 0.1rem;
+            padding-bottom: 0.08rem;
+            font-size: 0.1rem;
+            color: #679;
+
+            .ivu-breadcrumb {
+                font-size: 0.16rem;
+                color: #679;
+            }
+            @include flex(row, flex-start, center);
+
+            .ivu-breadcrumb > span:last-child {
+                font-weight: 400;
+                color: #235;
+            }
+        }
+
+        > .page-container {
+            @include size;
+            flex: 1;
+            overflow: hidden;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.test1 {
+    @include size;
+    display: flex;
+    flex-direction: column;
+    .panel {
+        padding: 0.1rem;
+        background: #fff;
+        border-radius: 0.08rem;
+        box-shadow: 0 0.02rem 0.1rem 0 rgba(34, 51, 85, 0.1);
+    }
+
+    > header {
+        .ant-btn {
+            margin-right: 0.1rem;
+        }
+    }
+
+    > article {
+        margin-top: 0.15rem;
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        .main-title {
+            margin-bottom: 0.1rem;
+        }
+        .ant-table-wrapper {
+            @include size;
+            overflow: hidden;
+            position: relative;
+        }
+        .ant-spin-nested-loading {
+            @include size;
+            overflow: hidden;
+            position: relative;
+        }
+        .ant-spin-container {
+            @include size;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .ant-table {
+            flex: 1;
+            width: 100%;
+            overflow-y: hidden;
+            display: flex;
+            position: relative;
+            .ant-table-content {
+                flex: 1;
+                .ant-table-scroll {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .ant-table-body {
+                    max-height: 800px !important;
+                    flex: 1;
+                }
+            }
+        }
+    }
+}

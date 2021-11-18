@@ -1,0 +1,47 @@
+.page-content {
+    @include size;
+    display: flex;
+    overflow: hidden;
+    background: white;
+    border-radius: 0.08rem;
+    box-shadow: 0 0.02rem 0.1rem 0 rgba(34, 51, 85, 0.1);
+    flex-direction: column;
+
+    .tool-bar {
+        display: flex;
+        padding: 0.1rem 0.2rem;
+        box-shadow: 0 0.01rem 0 0 #e4e4e4;
+        align-items: center;
+
+        .right-tool {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            align-items: center;
+
+            .iconfont {
+                margin-left: 0.1rem;
+                font-size: 0.2rem;
+                cursor: pointer;
+
+                &.active {
+                    color: #38f;
+                }
+            }
+        }
+    }
+
+    .page-content-body {
+        display: flex;
+        flex: 1;
+        padding: 0.1rem 0.15rem;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .ivu-page {
+        width: 100%;
+        margin-top: 0.1rem;
+        text-align: right;
+    }
+}

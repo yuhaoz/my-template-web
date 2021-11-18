@@ -1,0 +1,26 @@
+<header class="u-header">
+    <slot name="title">
+        <div class="logo">
+            <i class="iconfont icon-logo"></i>
+        </div>
+        <div class="title diy-app-title">{{title}}</div>
+    </slot>
+    <nav class="center" v-if="showNav">
+        <div class="menus">
+            <template v-for="(item,index) in  navs">
+                <router-link
+                    v-if="item.name"
+                    :to="{name: item.name}"
+                    class="router-link"
+                    tag="div"
+                >
+                    {{item.meta?.title || item.title}}
+                </router-link>
+                <div v-if="item.url" @click="onRoute(item)">
+                    {{item.meta?.title || item.title}}
+                </div>
+            </template>
+        </div>
+    </nav>
+    <u-setting></u-setting>
+</header>

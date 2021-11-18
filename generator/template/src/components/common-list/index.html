@@ -1,0 +1,27 @@
+<article class="u-common-list">
+    <slot name="header"></slot>
+    <i-input
+        class="diy-input"
+        search
+        v-model="keyword"
+        @on-change="filter()"
+    ></i-input>
+    <ul class="list" v-if="list.length">
+        <li
+            class="list-item"
+            :class="{'list-item-selected':index === currentIndex}"
+            v-for="(item, index) in list"
+            :key="index + 'list'"
+            @click="onSelect(item, index)"
+        >
+            <div class="list-item-title">{{item.name}}</div>
+            <i-dropdown v-if="menus.length" transfer>
+                <i class="iconfont icon-more"></i>
+                <i-dropdown-menu slot="list">
+                    <i-dropdown-item v-for="(menu,index) in menus" :key="'dropdown'+index" @click.native="onClick(menu, item)">{{menu.title}}</i-dropdown-item>
+                </i-dropdown-menu>
+            </i-dropdown>
+        </li>
+    </ul>
+    <p v-else>暂无数据</p>
+</article>

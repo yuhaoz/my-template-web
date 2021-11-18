@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+/* --------------------------------------------
+1、字体大小
+---------------------------------------------*/
+$font-size-g: 0.12rem;
+/* --------------------------------------------
+2、基本颜色
+---------------------------------------------*/
+$color-white-g: #fff;
+$color-blue-g: #4682b4;
+$color-red-g: #b22222;
+$color-orange-g: #ff8c00;
+$color-green-g: #3cb371;
+$color-gray-g: #808080;
+/* --------------------------------------------
+3、字体颜色
+---------------------------------------------*/
+$font-color-g: var(--text-color, #000);
+$font-color-white-g: $color-white-g;
+$font-color-gray-g: darken($color-gray-g, 10%);
+$font-color-blue-g: #4abdf4;
+/* --------------------------------------------
+4、背景颜色
+---------------------------------------------*/
+/* 顶部菜单渐变色 */
+$bg-header-left: #4860e6;
+$bg-header-right: #3388ff;
+$header-color: #fff;
+$layout-background-color: #f7f7f7; /*主页面背景颜色页面*/
+$component-background-color: #fff; /*页面组件背景*/
+$box-shadow-color: rgba(0, 0, 0, 0.1);

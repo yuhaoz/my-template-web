@@ -1,0 +1,76 @@
+.upload-file-flex {
+    display: flex;
+    position: relative;
+    .huo {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.1rem;
+    }
+    .upload-file {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        margin-right: 0.1rem;
+        cursor: pointer;
+        position: relative;
+        > span {
+            font-size: 12px;
+        }
+    }
+
+    .upload-video-body,
+    .upload-list-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        margin-right: 0.1rem;
+        position: relative;
+        .table-image {
+            width: 100px;
+            height: 100px;
+        }
+        .table-video {
+            width: 320px;
+            height: 200px;
+        }
+        .upload-list-cover {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        &:hover {
+            .upload-list-cover {
+                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    color: #fff;
+                    font-size: 25px;
+                    cursor: pointer;
+                    margin: 0 2px;
+                }
+            }
+        }
+    }
+    .upload-list-body {
+        width: 100px;
+        height: 120px;
+    }
+    .upload-video-body {
+        width: 320px;
+        height: 220px;
+    }
+    .ivu-progress-inner-text{
+        margin-top: -15px;
+    }
+}

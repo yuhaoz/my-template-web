@@ -1,0 +1,82 @@
+/**
+参考：https://app.mockplus.cn/app/deUaz7uNVi_/specs/design/S6p4_4j_CCH_
+ */
+
+// 主色采用科技蓝，更贴合数字与政府，给人明朗而积极的感觉，更加沉稳、干练、可靠、科技感也更像。
+$--color-primary: #38f !default;
+$--color-primary-c1: #f5f9ff !default;
+$--color-primary-c2: #eaf3ff !default;
+$--color-primary-c3: #99c3ff !default;
+
+// 中性色用于文本、背景和边框颜色。通过运用不同的中性色，来表现层次结构
+$--color-neutral: #223355 !default;
+$--color-font: $--color-neutral !default;
+
+// 辅助色用于除主色外的场景，常用来表示事情的紧急和危险程度。
+$--color-success: #11c79b !default;
+$--color-danger: #f61 !default;
+$--color-warning: #f90 !default;
+// $--color-warning: #aa8dff !default;
+
+/*
+ * 参考: https://app.mockplus.cn/app/deUaz7uNVi_/specs/design/S6p4_4j_CCH_
+ * 
+ */
+
+/*****************************************
+* 系统名称
+*****************************************/
+.diy-app-title {
+    font-size: 0.24rem;
+    font-family: "PingFangSC", "PingFangSC-Semibold";
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+    line-height: 0.33rem;
+}
+
+/*****************************************
+* 标题 1~3级
+*****************************************/
+.diy-h1,
+.diy-h2 {
+    font-size: 0.18rem;
+    font-weight: 600;
+}
+
+.diy-h3 {
+    font-size: 0.16rem;
+    font-weight: 600;
+}
+
+/*****************************************
+* 正文
+*****************************************/
+html,
+body,
+#app {
+    font-family: "PingFangSC", "PingFangSC-Regular", "Microsoft YaHei", "Arial";
+    font-size: 0.16rem;
+    color: $--color-font;
+}
+
+/*****************************************
+* 带蓝色方块前缀的标题
+*****************************************/
+.diy-title {
+    @include flex(row, flex-start, center);
+    position: relative;
+    position: relative;
+    // font-size: 0.2rem;
+    font-weight: 500;
+    line-height: 0.22rem;
+    color: #235;
+
+    &::before {
+        display: inline-block;
+        margin-right: 0.08rem;
+        background-color: #38f;
+        border-radius: 2px;
+        content: "";
+        @include size(0.08rem, 0.16rem);
+    }
+}

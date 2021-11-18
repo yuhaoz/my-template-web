@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "iconfont";
+    src: url(~@/assets/styles/icon/iconfont.eot); /* IE9 */
+    src: url(~@/assets/styles/icon/iconfont.eot?#iefix) format("embedded-opentype"), url(~@/assets/styles/icon/iconfont.woff2) format("woff2"),
+        url(~@/assets/styles/icon/iconfont.woff) format("woff"), url(~@/assets/styles/icon/iconfont.ttf) format("truetype"),
+        url(~@/assets/styles/icon/iconfont.svg#iconfont) format("svg"); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 0.16rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+}
+
+.icon-more:before {
+    content: "\e67a";
+  }
+  
+  .icon-setting:before {
+    content: "\e659";
+  }
+  
+  .icon-list:before {
+    content: "\e600";
+  }
+  
+  .icon-add:before {
+    content: "\e602";
+  }
+  
+  .icon-edit:before {
+    content: "\e603";
+  }
+  
+  .icon-delete:before {
+    content: "\e604";
+  }
+  
+  .icon-detail:before {
+    content: "\e607";
+  }
+  
+  .icon-menu:before {
+    content: "\e66a";
+  }
+  
+  .icon-shenhebutongguo:before {
+    content: "\e624";
+  }
+  
+  .icon-tongguo:before {
+    content: "\e75f";
+  }
+  
+  

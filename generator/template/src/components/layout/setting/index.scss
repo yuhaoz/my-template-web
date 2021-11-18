@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.setting-wrapper {
+    @include flex(row, center, center);
+    font-size: 0.18rem;
+
+    .nickName {
+        margin-left: 0.15rem;
+        color: var(--header-color, #fff);
+    }
+    .backView {
+        margin-right: 0.15rem;
+        color: var(--header-color, #fff);
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .action-text {
+        color: var(--header-color, #fff);
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .ivu-avatar {
+        @include size(0.4rem, 0.4rem);
+        object-fit: cover;
+    }
+
+    > .logout {
+        position: relative;
+        margin: 0 0.25rem;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: -0.2rem;
+            display: inline-block;
+            background: #0091ff;
+            content: "";
+            opacity: 0.3;
+            transform: translateY(-50%);
+            @include size(1px, 0.3rem);
+        }
+    }
+}

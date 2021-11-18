@@ -1,0 +1,14 @@
+<article class="v-welcome">
+    <h1 class="diy-h1">你好，欢迎使用后台管理模板项目</h1>
+
+    <section class="info">
+        <template v-for="item in list">
+            <h2 class="diy-h2">{{ item.title }}</h2>
+            <ul>
+                <li v-for="link in item.links" :key="link.text">
+                    <a :href="link.link" target="_blank">{{link.text}}</a>
+                </li>
+            </ul>
+        </template>
+    </section>
+</article>

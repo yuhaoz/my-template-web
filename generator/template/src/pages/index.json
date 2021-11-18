@@ -1,0 +1,10 @@
+{
+    "index": {
+        "name": "index",
+        "entry": "src/pages/admin/main.ts",
+        "template": "public/index.html",
+        "filename": "index.html",
+        "title": "管理后台",
+        "chunks": ["chunk-vendors", "chunk-common", "index"]
+    }
+}
